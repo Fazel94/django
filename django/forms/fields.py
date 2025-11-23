@@ -132,7 +132,8 @@ class Field:
         # validators -- List of additional validators to use
         # localize -- Boolean that specifies if the field should be localized.
         # disabled -- Boolean that specifies whether the field is disabled,
-        #             that is its widget is shown in the form but not editable.
+        #             that is, its widget is shown in the form but not
+        #             editable.
         # label_suffix -- Suffix to be added to the label. Overrides
         #                 form's label_suffix.
         # bound_field_class -- BoundField class to use in
