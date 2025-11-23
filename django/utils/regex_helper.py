@@ -84,7 +84,7 @@ def normalize(pattern):
                 # Replace "any character" with an arbitrary representative.
                 result.append(".")
             elif ch == "|":
-                # FIXME: One day we'll should do this, but not in 1.0.
+                # FIXME: One day we should do this, but not in 1.0.
                 raise NotImplementedError("Awaiting Implementation")
             elif ch == "^":
                 pass
