@@ -65,6 +65,14 @@ class TestRegistration(SimpleTestCase):
         with self.assertRaisesMessage(NotRegistered, msg):
             self.site.get_model_admin(Person)
 
+    def test_get_model_admin_string_reference(self):
+        """
+        get_model_admin() handles string references gracefully.
+        """
+        msg = "The model 'admin_registration.NonExistentModel' is not registered."
+        with self.assertRaisesMessage(NotRegistered, msg):
+            self.site.get_model_admin("admin_registration.NonExistentModel")
+
     def test_star_star_overrides(self):
         self.site.register(
             Person, NameAdmin, search_fields=["name"], list_display=["__str__"]
